@@ -1,0 +1,7 @@
+Image Naming Rules for consistency:
+
+NO IMAGE MAY CONTAIN NUMBERS
+
+CAMEL CASE
+
+MAKE SURE TO CLEARLY RENAME FILES
