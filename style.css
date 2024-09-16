@@ -1,30 +1,35 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(components/Montserrat/static/Montserrat-Black.ttf);
+}
+
 body {
     overflow-x: clip;
 }
-
 header {
     color: red;
     background: #93c6f5;
     height: 50px;
-    box-shadow: 0px 0px 10px 4px black;
-    z-index: 2;
+    box-shadow: 0px 0px 10px 4px black, 0px 0px 10px 4px black, 0px 0px 10px 4px black;
+    z-index: 10;
+    line-height: 50px;
+    font-family: Montserrat;
 }
 main {
     background: #93c6f5;
 }
-
 div {
     padding: 0 !important;
 }
-
 .w-100 img {
     width: 100% !important;
 }
-
 .images {
     overflow: clip;
 }
-
 .main-image {
     height: 500px;
+}
+a {
+    color: #4e3232 !important;
 }
