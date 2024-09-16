@@ -1,0 +1,30 @@
+body {
+    overflow-x: clip;
+}
+
+header {
+    color: red;
+    background: #93c6f5;
+    height: 50px;
+    box-shadow: 0px 0px 10px 4px black;
+    z-index: 2;
+}
+main {
+    background: #93c6f5;
+}
+
+div {
+    padding: 0 !important;
+}
+
+.w-100 img {
+    width: 100% !important;
+}
+
+.images {
+    overflow: clip;
+}
+
+.main-image {
+    height: 500px;
+}
