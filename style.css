@@ -11,25 +11,56 @@ header {
     background: #93c6f5;
     height: 50px;
     box-shadow: 0px 0px 10px 4px black, 0px 0px 10px 4px black, 0px 0px 10px 4px black;
-    z-index: 10;
+    z-index: 2;
     line-height: 50px;
     font-family: Montserrat;
 }
 main {
     background: #93c6f5;
+    height: 500px;
 }
 div {
     padding: 0 !important;
 }
-.w-100 img {
-    width: 100% !important;
-}
-.images {
-    overflow: clip;
-}
-.main-image {
-    height: 500px;
-}
 a {
     color: #4e3232 !important;
+}
+
+.big {
+    height: 500px;
+}
+
+.subrow {
+    height: 500px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.top {
+    height: 250px;
+}
+
+.bottom {
+    height: 250px;
+}
+
+.obj-middle {
+    object-position: center;
+}
+
+.sides {
+    background: #4678c4;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0) inset;
+}
+
+.sidebar {
+    height: 100vw;
+    position: fixed;
+    width: 50px;
+    background-color: purple;
 }
