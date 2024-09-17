@@ -118,7 +118,7 @@ img {
     height: 50px;
     top: 0;
     left: 0;
-    background: #A0d28d;
+    background: #789b6a;
     z-index: 3;
 }
 
@@ -150,9 +150,11 @@ img {
     backdrop-filter: blur(5px);
     z-index: 3;
     opacity: 0;
+    display: none;
 }
 
 .covering {
+    display: block;
     animation-name: darken;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
@@ -171,6 +173,7 @@ img {
 }
 
 .leaving {
+    display: block;
     animation-name: lighten;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;

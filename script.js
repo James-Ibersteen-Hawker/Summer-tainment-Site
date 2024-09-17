@@ -14,7 +14,7 @@ function sidebar(param) {
         sidebar.classList.remove("sidebar-open");
         sidebar.setAttribute("style", "left: 0;");
         cover.classList.remove("covering");
-        cover.setAttribute("style", "opacity: 1;");
+        cover.setAttribute("style", "opacity: 1; display: block;");
     }, 500);
   } else {
     sidebar.classList.add("sidebar-close");
