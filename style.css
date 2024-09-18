@@ -8,6 +8,11 @@
     src: url(Quicksand/static/Quicksand-Regular.ttf);
 }
 
+@font-face {
+    font-family: Retro-Vintage;
+    src: url(components/retro_vintage/RetroVintage-Regular.otf);
+}
+
 body {
     overflow-x: clip;
     --bar-width: 60px;
@@ -224,4 +229,17 @@ img {
     to {
         opacity: 0;
     }
+}
+
+/*cover ends */
+#big_header {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    font-size: 100px;
+    font-family: Retro-Vintage;
+    text-shadow: 0px 0px 10px white, 0px 0px 5px #cbebbf;
+    color: #4e3232;
+    margin-left: 10px;
 }
