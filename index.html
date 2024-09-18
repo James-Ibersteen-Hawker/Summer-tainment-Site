@@ -18,53 +18,24 @@
 <!--some change-->
 
 <body>
-    <div class="cover" id="darken" onclick="sidebar(0)"></div>
-    <div class="sidebar" id="sidebar">
-        <div class="close" onclick="sidebar(0)">
-            <span class="material-symbols-outlined close-icon">
-                close
-            </span>
-        </div>
-        <div class="links">
-            <ul>
-                <li>Overview</li>
-                <li>Location</li>
-                <li>Highlights</li>
-                <li>Recommendation</li>
-            </ul>
-        </div>
-    </div>
-    <header class="text-center row">
-        <a href="index.html">summer-tainment.org</a>
-    </header>
-    <div class="icon" onclick="sidebar(1)">
-        <span class="material-symbols-outlined menu-icon">menu</span>
-    </div>
+    <header class="text-center"><a href="index.html">summer-tainment.org</a></header>
     <div class="container-fluid">
-        <div class="row">
-            <aside class="col-1 sides"></aside>
-            <!--main content begin-->
-            <div class="col-10">
-                <main>
-                    <div class="row">
-                        <div class="col-8 big">
-                            <img src="imgs/saguenay.jpg">
-                        </div>
-                        <div class="col-4 subrow">
-                            <div class="col-12 top">
-                                <img src="imgs/Séjour-Fairmonnt-Manoir-Richelieu-Été.png">
-                            </div>
-                            <div class="col-12 bottom">
-                                <img src="imgs/villa.jpg" class="obj-middle">
-                            </div>
-                        </div>
-                    </div>
-                </main>
-
+        <main class="row images">
+            <div class="col-8">
+                <img class="img-fluid main-image h-100" src="imgs/saguenay.jpg">
             </div>
-            <!--main content end-->
-            <aside class="col-1 sides"></aside>
-        </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-12">
+                        <img class="img-fluid" src="imgs/Séjour-Fairmonnt-Manoir-Richelieu-Été.png">
+                    </div>
+                    <div class="col-12">
+                        <img class="img-fluid" src="imgs/villa.jpg">
+                    </div>
+                </div>
+            </div>
+        </main>
+
     </div>
     <footer>
         <!-- place footer here -->
