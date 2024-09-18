@@ -3,6 +3,11 @@
     src: url(components/Montserrat/static/Montserrat-Black.ttf);
 }
 
+@font-face {
+    font-family: Quicksand;
+    src: url(Quicksand/static/Quicksand-Regular.ttf);
+}
+
 body {
     overflow-x: clip;
     --bar-width: 60px;
@@ -151,11 +156,23 @@ img {
 }
 
 .links ul li {
-    padding: 50px 0 50px 10px;
+    padding: 50px 0 50px 8px;
     color: #4e3232;
     text-overflow: ellipsis;
     width: var(--bar-width);
+    transition: 0.5s;
     overflow-x: clip;
+    font-family: Quicksand;
+}
+
+.links ul li:hover {
+    background-color: #cbebbf;
+    width: 200px;
+    text-align: right;
+    padding-right: 40px;
+    transition: 0.5s;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* sidebar related stuff ends */
