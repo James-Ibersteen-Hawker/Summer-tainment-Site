@@ -30,7 +30,16 @@ header {
 main {
     background: #93c6f5;
     height: 500px;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
 }
+
+section {
+    width: 100%;
+    padding: 10px;
+}
+
 div {
     padding: 0 !important;
 }
