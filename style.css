@@ -2,34 +2,214 @@
     font-family: Montserrat;
     src: url(components/Montserrat/static/Montserrat-Black.ttf);
 }
+@font-face {
+    font-family: Lacosta;
+    src: url(components/);
+}
 
 body {
     overflow-x: clip;
+    --bar-width: 60px;
+    --header-height: 50px;
+    --sidebar-color: #3a4e32;
 }
 header {
-    color: red;
     background: #93c6f5;
-    height: 50px;
+    height: var(--header-height);
     box-shadow: 0px 0px 10px 4px black, 0px 0px 10px 4px black, 0px 0px 10px 4px black;
-    z-index: 10;
+    z-index: 2;
     line-height: 50px;
     font-family: Montserrat;
 }
 main {
     background: #93c6f5;
+    height: 500px;
 }
 div {
     padding: 0 !important;
 }
-.w-100 img {
-    width: 100% !important;
-}
-.images {
-    overflow: clip;
-}
-.main-image {
-    height: 500px;
-}
 a {
     color: #4e3232 !important;
 }
+
+.big {
+    height: 500px;
+}
+
+.subrow {
+    height: 500px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.top {
+    height: 250px;
+}
+
+.bottom {
+    height: 250px;
+}
+
+.obj-middle {
+    object-position: center;
+}
+
+.sides {
+    background: #4678c4;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0) inset;
+}
+
+/*sidebar css styles, including animations*/
+
+.sidebar {
+    height: 100%;
+    position: fixed;
+    width: var(--bar-width);
+    left: calc(var(--bar-width) * -1);
+    background-color: var(--sidebar-color);
+    z-index: 5;
+    padding: 0;
+}
+
+.sidebar-open {
+    animation-name: open;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes open {
+    from {
+        left: calc(var(--bar-width) * -1);
+    }
+    to {
+        left: 0;
+    }
+}
+
+.sidebar-close {
+    animation-name: close;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes close {
+    from {
+        left: 0;
+    }
+    to {
+        left: calc(var(--bar-width) * -1);
+    }
+}
+
+.menu-icon {
+    margin-top: 12px;
+    margin-left: 11px;
+    line-height: var(--header-height);
+}
+
+.icon {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: #789b6a;
+    z-index: 3;
+}
+
+.icon:hover {
+    box-shadow: 0px 0px 5px inset black;
+    transition: 0.2s;
+}
+
+.close {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    background: #A0d28d;
+}
+
+.close-icon {
+    margin-left: 15px;
+    margin-top: 12px;
+}
+
+.links ul {
+    list-style-type: none;
+    position: absolute;
+    width: var(--bar-width);
+    top: 50%;
+    padding-left: 0;
+    transform: translateY(-50%);
+    background-color: #A0d28d;
+}
+.links ul li {
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow-x: clip;
+    margin: 50px 0;
+    padding-left: 10px;
+    color: #4e3232;
+    background-color: #A0d28d;
+}
+/* sidebar related stuff ends */
+/* screen darken */
+.cover {
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    z-index: 3;
+    opacity: 0;
+    display: none;
+}
+
+.covering {
+    display: block;
+    animation-name: darken;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes darken {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.leaving {
+    display: block;
+    animation-name: lighten;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes lighten {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+/*end of cover*/
