@@ -18,6 +18,7 @@ body {
     --bar-width: 60px;
     --header-height: 50px;
     --sidebar-color: #3a4e32;
+    --brown: #4e3232;
 }
 header {
     background: #93c6f5;
@@ -30,12 +31,75 @@ header {
 main {
     background: #93c6f5;
     height: 500px;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
 }
+
+section {
+    font-family: Quicksand;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 8px;
+    margin: 0 !important;
+    background-color: #e5ffea;
+}
+
+.main_section {
+    background-color: #e5ffea; 
+}
+
+.stars {
+    padding-top: 50px;
+    color: gold;
+    font-size: 20px;
+}
+
+.unfull_hr {
+    width: 80%;
+    height: 2px;
+    border: none;
+    background: black;
+    opacity: .3;
+    border-radius: 5px;
+}
+
+.behind {
+    background: linear-gradient(25deg,gold, rgba(0,0,0,0), rgba(0,0,0,0), gold);
+    padding: 10px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.behind img {
+    transform: scale(.95);
+    border: 5px double var(--brown);
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(200,200,200,.7);
+    opacity: 0;
+    transition: 0.3s;
+    transform: scale(0.95);
+    padding: 20px !important;
+    text-align: center;
+}
+
+.caption:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
 div {
     padding: 0 !important;
 }
 a {
-    color: #4e3232 !important;
+    color: var(--brown) !important;
 }
 
 .big {
@@ -124,6 +188,7 @@ img {
 
 .icon {
     position: fixed;
+    cursor: pointer;
     width: 50px;
     height: 50px;
     top: 0;
@@ -143,6 +208,7 @@ img {
     height: 50px;
     padding-left: 20px;
     background: #A0d28d;
+    cursor: pointer;
 }
 
 .close-icon {
@@ -161,13 +227,17 @@ img {
 }
 
 .links ul li {
-    padding: 50px 0 50px 8px;
-    color: #4e3232;
+    padding: 40px 0 40px 8px;
+    color: var(--brown);
     text-overflow: ellipsis;
     width: var(--bar-width);
     transition: 0.5s;
     overflow-x: clip;
     font-family: Quicksand;
+}
+
+.links ul a {
+    text-decoration: none;
 }
 
 .links ul li:hover {
@@ -236,10 +306,38 @@ img {
     position: absolute;
     z-index: 2;
     bottom: 0;
-    left: 0;
+    left: 20px;
     font-size: 100px;
     font-family: Retro-Vintage;
     text-shadow: 0px 0px 10px white, 0px 0px 5px #cbebbf;
-    color: #4e3232;
-    margin-left: 10px;
+    color: var(--brown);
+}
+
+/*webpage */
+iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 5/3;
+}
+
+.half_hr {
+    width: 40%;
+    height: 2px;
+    border: none;
+    background: black;
+    opacity: .3;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-left: auto;
+}
+
+p {
+    padding: 10px;
+    padding-top: 0px;
+    text-align: left;
+}
+
+blockquote {
+    font-style: italic;
+    text-align: left;
 }

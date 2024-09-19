@@ -1,3 +1,4 @@
+<!--divs are overview, location, highlights, and recommendations-->
 <!doctype html>
 <html lang="en">
 
@@ -14,10 +15,13 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <!--some change-->
 
 <body>
+    <!--sidebar and externals-->
     <div class="cover" id="darken" onclick="sidebar(0)"></div>
     <div class="sidebar" id="sidebar">
         <div class="close" onclick="sidebar(0)">
@@ -27,10 +31,18 @@
         </div>
         <div class="links">
             <ul>
-                <li class="shorter">Overview</li>
-                <li class="shorter">Location</li>
-                <li class="shorter">Highlights</li>
-                <li id="longer">Recommendation</li>
+                <a href="#overview">
+                    <li class="shorter" onclick="sidebar(0)">Overview</li>
+                </a>
+                <a href="#location">
+                    <li class="shorter" onclick="sidebar(0)">Location</li>
+                </a>
+                <a href="#highlights">
+                    <li class="shorter" onclick="sidebar(0)">Highlights</li>
+                </a>
+                <a href="#recommendations" onclick="sidebar(0)">
+                    <li id="longer">Recommendation</li>
+                </a>
             </ul>
         </div>
     </div>
@@ -40,28 +52,76 @@
     <div class="icon" onclick="sidebar(1)">
         <span class="material-symbols-outlined menu-icon">menu</span>
     </div>
+    <!--sidebar and externals end-->
     <div class="container-fluid">
         <div class="row">
             <aside class="col-1 sides"></aside>
             <!--main content begin-->
-            <div class="col-10">
-                <main>
-                    <div class="row" style="position: relative;">
-                        <div class="col-8 big">
-                            <img src="imgs/saguenay.jpg">
+            <div class="col-10" style="margin: 0; padding: 0;">
+                <!--header img-->
+                <main class="row" style="position: relative">
+                    <div class="col-8 big">
+                        <img src="imgs/saguenay.jpg">
+                    </div>
+                    <div class="col-4 subrow">
+                        <div class="col-12 top">
+                            <img src="imgs/Séjour-Fairmonnt-Manoir-Richelieu-Été.png">
                         </div>
-                        <div class="col-4 subrow">
-                            <div class="col-12 top">
-                                <img src="imgs/Séjour-Fairmonnt-Manoir-Richelieu-Été.png">
-                            </div>
-                            <div class="col-12 bottom">
-                                <img src="imgs/villa.jpg" class="obj-middle">
-                            </div>
+                        <div class="col-12 bottom">
+                            <img src="imgs/villa.jpg" class="obj-middle">
                         </div>
-                        
-                    <h1 id="big_header">La <br>Malbaie</h1>
+
+                        <h1 id="big_header">La <br>Malbaie</h1>
                     </div>
                 </main>
+                <!--header img end-->
+                <!--rating-->
+                <div class="main_section">
+                    <!--rating-->
+                    <section class="row">
+                        <div class="col-7 stars">
+                            &#9733;
+                            &#9733;
+                            &#9733;
+                            &#9733;
+                            &#9733;
+                        </div>
+                        <div class="col-5"></div>
+                        <hr class="unfull_hr">
+                    </section>
+                    <!--overview-->
+                    <section class="row" id="overview">
+                        <div class="col-6 text-center">
+                            <h2> - Overview - </h2>
+                            <blockquote>When ships docked here, the tide went out and they were beached. That’s why it
+                                was called La Malbaie; the bad bay.
+                            </blockquote>
+                            <p>
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <div class="behind">
+                                <img src="imgs/saguenay fjord 2.jpg">
+                                <div class="caption">The fjord Saguenay opens into the St. Lawrence River, which eventually opens into the Atlantic Ocean.</div>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="half_hr">
+                    <!--map-->
+                    <section class="row" id="location">
+                        <div class="col-6">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d284004.6214194317!2d-70.35098794192986!3d47.73344153294455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbfaea85b495bf1%3A0x49d51409f4933cb5!2sLa%20Malbaie%2C%20QC%2C%20Canada!5e0!3m2!1sen!2sus!4v1726673264923!5m2!1sen!2sus"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="col-6 text-center">
+                            <h2> - Map - </h2>
+                            <p class="text-start">La Malbaie is a small town in the Charlevoix municipality, an hour from the opening of the fjord Saguenay.</p>
+                        </div>
+                    </section>
+                    <hr class="half_hr" style="margin-left: 50px; margin-right: auto;">
+                </div>
             </div>
             <!--main content end-->
             <aside class="col-1 sides"></aside>
