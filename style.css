@@ -88,10 +88,6 @@ section {
     transition: 0.3s;
     transform: scale(0.95);
     padding: 20px !important;
-<<<<<<< HEAD
-    text-align: center;
-=======
->>>>>>> 2bee18b2e755622ff070978d825c45f1a349a303
 }
 
 .caption:hover {
@@ -337,14 +333,4 @@ iframe {
 
 p {
     padding: 10px;
-<<<<<<< HEAD
-    padding-top: 0px;
-    text-align: left;
-}
-
-blockquote {
-    font-style: italic;
-    text-align: left;
-=======
->>>>>>> 2bee18b2e755622ff070978d825c45f1a349a303
 }
