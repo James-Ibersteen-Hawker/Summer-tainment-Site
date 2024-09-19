@@ -31,10 +31,18 @@
         </div>
         <div class="links">
             <ul>
-                <li class="shorter">Overview</li>
-                <li class="shorter">Location</li>
-                <li class="shorter">Highlights</li>
-                <li id="longer">Recommendation</li>
+                <a href="#overview">
+                    <li class="shorter" onclick="sidebar(0)">Overview</li>
+                </a>
+                <a href="#location">
+                    <li class="shorter" onclick="sidebar(0)">Location</li>
+                </a>
+                <a href="#highlights">
+                    <li class="shorter" onclick="sidebar(0)">Highlights</li>
+                </a>
+                <a href="#recommendations" onclick="sidebar(0)">
+                    <li id="longer">Recommendation</li>
+                </a>
             </ul>
         </div>
     </div>
@@ -66,6 +74,54 @@
                         <h1 id="big_header">La <br>Malbaie</h1>
                     </div>
                 </main>
+                <!--header img end-->
+                <!--rating-->
+                <div class="main_section">
+                    <!--rating-->
+                    <section class="row">
+                        <div class="col-7 stars">
+                            &#9733;
+                            &#9733;
+                            &#9733;
+                            &#9733;
+                            &#9733;
+                        </div>
+                        <div class="col-5"></div>
+                        <hr class="unfull_hr">
+                    </section>
+                    <!--overview-->
+                    <section class="row" id="overview">
+                        <div class="col-6 text-center">
+                            <h2> - Overview - </h2>
+                            <blockquote>When ships docked here, the tide went out and they were beached. That’s why it
+                                was called La Malbaie; the bad bay.
+                            </blockquote>
+                            <p>
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <div class="behind">
+                                <img src="imgs/saguenay fjord 2.jpg">
+                                <div class="caption">The fjord Saguenay opens into the St. Lawrence River, which eventually opens into the Atlantic Ocean.</div>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="half_hr">
+                    <!--map-->
+                    <section class="row" id="location">
+                        <div class="col-6">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d284004.6214194317!2d-70.35098794192986!3d47.73344153294455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbfaea85b495bf1%3A0x49d51409f4933cb5!2sLa%20Malbaie%2C%20QC%2C%20Canada!5e0!3m2!1sen!2sus!4v1726673264923!5m2!1sen!2sus"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="col-6 text-center">
+                            <h2> - Map - </h2>
+                            <p class="text-start">La Malbaie is a small town in the Charlevoix municipality, an hour from the opening of the fjord Saguenay.</p>
+                        </div>
+                    </section>
+                    <hr class="half_hr" style="margin-left: 50px; margin-right: auto;">
+                </div>
             </div>
             <!--main content end-->
             <aside class="col-1 sides"></aside>
