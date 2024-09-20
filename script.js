@@ -43,12 +43,12 @@ function show_button() {
 }
 
 function footer() {
-  let footer = document.getElementsByClassName("footer_container")[0];
-  if (scrollY >= 50) {
-    footer.classList.remove("footerd_inverse");
+  let footer = document.getElementsByClassName("pre-footer")[0];
+  if (scrollY >= 1000) {
+    footer.classList.remove("inverse-footerd");
     footer.classList.add("footerd");
   } else {
     footer.classList.remove("footerd");
-    footer.classList.add("footerd_inverse");
+    footer.classList.add("inverse-footerd");
   }
 }

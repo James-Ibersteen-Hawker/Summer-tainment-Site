@@ -438,7 +438,7 @@ p {
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
 }
-/* 
+
 @keyframes footerman {
     from {
         background: linear-gradient(to top,#253021, rgba(0,0,0,0));
@@ -457,7 +457,7 @@ p {
     to {
         background: linear-gradient(to top,#253021, rgba(0,0,0,0));
     }
-} */
+}
 
 footer {
     width: 100%;
