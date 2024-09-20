@@ -24,7 +24,12 @@ function sidebar(param) {
 }
 
 //back to top button
-window.addEventListener("scroll", show_button);
+window.addEventListener("scroll", scrolled);
+
+function scrolled() {
+  show_button();
+  footer();
+}
 
 function show_button() {
   let button = document.getElementsByClassName("to_top")[0];
@@ -34,5 +39,16 @@ function show_button() {
   } else if (scrollY < 100) {
     button.classList.add("fade_out_button");
     button.classList.remove("fade_in_button");
+  }
+}
+
+function footer() {
+  let footer = document.getElementsByClassName("footer_container")[0];
+  if (scrollY >= 50) {
+    footer.classList.remove("footerd_inverse");
+    footer.classList.add("footerd");
+  } else {
+    footer.classList.remove("footerd");
+    footer.classList.add("footerd_inverse");
   }
 }
