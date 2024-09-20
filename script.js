@@ -1,5 +1,4 @@
 //sidebar
-
 function sidebar(param) {
   let sidebar = document.getElementById("sidebar");
   let cover = document.getElementById("darken");
@@ -21,5 +20,19 @@ function sidebar(param) {
       cover.classList.remove("leaving");
       cover.setAttribute("style", "opacity: 0;");
     }, 500);
+  }
+}
+
+//back to top button
+window.addEventListener("scroll", show_button);
+
+function show_button() {
+  let button = document.getElementsByClassName("to_top")[0];
+  if (scrollY >= 100) {
+    button.classList.add("fade_in_button");
+    button.classList.remove("fade_out_button");
+  } else if (scrollY < 100) {
+    button.classList.add("fade_out_button");
+    button.classList.remove("fade_in_button");
   }
 }
