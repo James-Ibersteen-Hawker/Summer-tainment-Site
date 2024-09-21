@@ -43,6 +43,8 @@ function show_button() {
 }
 
 let bottomReached = false;
+let fakeConsole = document.getElementById("recommendations");
+let value = 0;
 
 function footer() {
   let footer = document.getElementsByClassName("pre-footer")[0];
@@ -54,6 +56,7 @@ function footer() {
     footer.classList.add("footFadeIn");
     bottomReached = true;
   } else {
+    //WHHYYYYYYYYY
     if (bottomReached == true) {
       footer.classList.remove("footFadeIn");
       footer.classList.add("footFadeOut");
