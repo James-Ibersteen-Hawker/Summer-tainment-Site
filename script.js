@@ -42,13 +42,21 @@ function show_button() {
   }
 }
 
+let bottomReached = false;
+
 function footer() {
   let footer = document.getElementsByClassName("pre-footer")[0];
-  if (scrollY >= 1000) {
-    footer.classList.remove("inverse-footerd");
-    footer.classList.add("footerd");
+  if (
+    window.innerHeight + Math.round(window.scrollY) >=
+    document.body.offsetHeight
+  ) {
+    footer.classList.remove("footFadeOut");
+    footer.classList.add("footFadeIn");
+    bottomReached = true;
   } else {
-    footer.classList.remove("footerd");
-    footer.classList.add("inverse-footerd");
+    if (bottomReached == true) {
+      footer.classList.remove("footFadeIn");
+      footer.classList.add("footFadeOut");
+    }
   }
 }
