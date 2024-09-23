@@ -1,3 +1,7 @@
+window.onload = function startUp() {
+  sectionHeight();
+};
+
 //sidebar
 function sidebar(param) {
   let sidebar = document.getElementById("sidebar");
@@ -43,8 +47,6 @@ function show_button() {
 }
 
 let bottomReached = false;
-let fakeConsole = document.getElementById("recommendations");
-let value = 0;
 
 function footer() {
   let footer = document.getElementsByClassName("pre-footer")[0];
@@ -56,10 +58,44 @@ function footer() {
     footer.classList.add("footFadeIn");
     bottomReached = true;
   } else {
-    //WHHYYYYYYYYY
     if (bottomReached == true) {
       footer.classList.remove("footFadeIn");
       footer.classList.add("footFadeOut");
+    } else {
+      footer.classList.remove("footFadeIn");
+    }
+  }
+}
+
+//section height
+
+window.addEventListener("resize", onResize);
+
+function onResize() {
+  sectionHeight();
+}
+
+function sectionHeight() {
+  if (window.innerWidth >= 992) {
+    let fullHeightElem = document.getElementsByClassName("img-col")[0];
+    let fullHeight = fullHeightElem.offsetHeight;
+    let halves = [
+      document.getElementsByClassName("half-height")[0],
+      document.getElementsByClassName("half-height")[1],
+    ];
+    for (let i = 0; i < halves.length; i++) {
+      halves[i].setAttribute(
+        "style",
+        `height: ${fullHeight / 2}px; background: #e5ffea;`
+      );
+    }
+  } else {
+    let halves = [
+      document.getElementsByClassName("half-height")[0],
+      document.getElementsByClassName("half-height")[1],
+    ];
+    for (let i = 0; i < halves.length; i++) {
+      halves[i].setAttribute("style", `background: #e5ffea;`);
     }
   }
 }
