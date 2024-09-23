@@ -507,3 +507,17 @@ footer {
         background: linear-gradient(to top,#253021, rgba(37, 48, 33,0));
     }
 }
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+ol {
+    list-style-type: none;
+}
+
+.tabbed {
+    padding-left: 20px;
+}
