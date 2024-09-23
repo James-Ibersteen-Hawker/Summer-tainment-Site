@@ -20,6 +20,7 @@ body {
     --sidebar-color: #3a4e32;
     --brown: #4e3232;
     --peach-green: #A0d28d;
+    --light-green: #e5ffea;
 }
 
 header {
@@ -46,11 +47,11 @@ section {
     padding-right: 20px;
     padding-top: 8px;
     margin: 0 !important;
-    background-color: #e5ffea;
+    background-color: var(--light-green);
 }
 
 .main_section {
-    background-color: #e5ffea;
+    background-color: var(--light-green);
 }
 
 .stars {
@@ -447,7 +448,7 @@ footer {
 
 .filler {
     width: 100%;
-    background-color: #e5ffea;
+    background-color: var(--light-green);
     height: 280px;
 }
 
@@ -520,4 +521,15 @@ ol {
 
 .tabbed {
     padding-left: 20px;
+}
+
+.half-height ol {
+    padding-right: 50px;
+}
+
+footer.text-center a {
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 900;
+    color: var(--light-green) !important;
 }
