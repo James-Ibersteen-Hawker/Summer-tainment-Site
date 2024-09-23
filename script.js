@@ -86,7 +86,7 @@ function sectionHeight() {
     for (let i = 0; i < halves.length; i++) {
       halves[i].setAttribute(
         "style",
-        `height: ${fullHeight / 2}px; background: #e5ffea;`
+        `min-height: ${fullHeight / 2}px; background: #e5ffea;`
       );
     }
   } else {
