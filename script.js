@@ -50,20 +50,17 @@ let bottomReached = false;
 
 function footer() {
   let footer = document.getElementsByClassName("pre-footer")[0];
+  let textDiv = document.getElementsByClassName("filler")[0];
   if (
     window.innerHeight + Math.round(window.scrollY) >=
-    document.body.offsetHeight
+    document.body.offsetHeight - 20
   ) {
     footer.classList.remove("footFadeOut");
     footer.classList.add("footFadeIn");
     bottomReached = true;
   } else {
-    if (bottomReached == true) {
-      footer.classList.remove("footFadeIn");
-      footer.classList.add("footFadeOut");
-    } else {
-      footer.classList.remove("footFadeIn");
-    }
+    footer.classList.remove("footFadeIn");
+    footer.classList.add("footFadeOut");
   }
 }
 
