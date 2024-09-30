@@ -1,3 +1,7 @@
+window.onload = function startUp() {
+  sectionHeight();
+};
+
 //sidebar
 function sidebar(param) {
   let sidebar = document.getElementById("sidebar");
@@ -42,13 +46,56 @@ function show_button() {
   }
 }
 
+let bottomReached = false;
+
 function footer() {
   let footer = document.getElementsByClassName("pre-footer")[0];
-  if (scrollY >= 1000) {
-    footer.classList.remove("inverse-footerd");
-    footer.classList.add("footerd");
+  if (
+    window.innerHeight + Math.round(window.scrollY) >=
+    document.body.offsetHeight
+  ) {
+    footer.classList.remove("footFadeOut");
+    footer.classList.add("footFadeIn");
+    bottomReached = true;
   } else {
-    footer.classList.remove("footerd");
-    footer.classList.add("inverse-footerd");
+    if (bottomReached == true) {
+      footer.classList.remove("footFadeIn");
+      footer.classList.add("footFadeOut");
+    } else {
+      footer.classList.remove("footFadeIn");
+    }
+  }
+}
+
+//section height
+
+window.addEventListener("resize", onResize);
+
+function onResize() {
+  sectionHeight();
+}
+
+function sectionHeight() {
+  if (window.innerWidth >= 992) {
+    let fullHeightElem = document.getElementsByClassName("img-col")[0];
+    let fullHeight = fullHeightElem.offsetHeight;
+    let halves = [
+      document.getElementsByClassName("half-height")[0],
+      document.getElementsByClassName("half-height")[1],
+    ];
+    for (let i = 0; i < halves.length; i++) {
+      halves[i].setAttribute(
+        "style",
+        `min-height: ${fullHeight / 2}px; background: #e5ffea;`
+      );
+    }
+  } else {
+    let halves = [
+      document.getElementsByClassName("half-height")[0],
+      document.getElementsByClassName("half-height")[1],
+    ];
+    for (let i = 0; i < halves.length; i++) {
+      halves[i].setAttribute("style", `background: #e5ffea;`);
+    }
   }
 }

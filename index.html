@@ -1,9 +1,8 @@
-<!--divs are overview, location, highlights, and recommendations-->
 <!doctype html>
 <html lang="en">
 
 <head>
-    <title>Summer-tainment Site</title>
+    <title>Malbaie Summer-tainment Site</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -76,7 +75,7 @@
                     </div>
                 </main>
                 <!--header img end-->
-                <!--rating-->
+                <!--main section-->
                 <div class="main_section">
                     <!--rating-->
                     <section class="row">
@@ -109,7 +108,7 @@
                         </div>
                     </section>
                     <hr class="half_hr">
-                    <!--map-->
+                    <!--location-->
                     <section class="row" id="location">
                         <div class="col-6">
                             <iframe
@@ -117,22 +116,59 @@
                                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        <div class="col-6 text-center">
-                            <h2> - Map - </h2>
+                        <div class="col-6 text-center" style="position: relative;">
+                            <h2> - Location - </h2>
                             <p class="text-start">La Malbaie is a small town in the Charlevoix municipality, an hour
                                 from the opening of the fjord Saguenay.</p>
                         </div>
                     </section>
                     <hr class="half_hr" style="margin-left: 50px; margin-right: auto;">
-                    <!--hightlight-->
-                    <section class="row">
-                        <div class=" col-12 col-lg-8 text-center">
-                            <h2> - Highlights - </h2>
-                            <p class="text-start">La Malbaie is a small town in the Charlevoix municipality, an hour
-                                from the opening of the fjord Saguenay.</p>
+                    <!--hightlights-->
+                    <section class="row full-height">
+                        <div class="col-12 col-lg-8">
+                            <div class="col-12 half-height" id="highlights">
+                                <h2 class="centered">- Highlights -</h2>
+                                <h3>- Hotels -</h3>
+                                <ol>
+                                    <li><a href="https://www.fairmont.com/richelieu-charlevoix/" target="_blank">La
+                                            Manoir Richelieu</a></li>
+                                    <li class="tabbed">This famous 5-star Fairmont hotel overlooks the St. Lawrence
+                                        River</li>
+                                    <li><a href="https://www.fairmont.com/richelieu-charlevoix/" target="_blank">La
+                                            Villa Julie</a></li>
+                                    <li class="tabbed">The Villa Julie is a private house available on AirBNB, where I
+                                        stayed during my trip</li>
+                                    <li><a href="https://www.auberge3canards.com/en" target="_blank">L'auberge Des 3
+                                            Canards</a></li>
+                                    <li class="tabbed">L'auberge is a smaller hotel which overlooks the river. It
+                                        originally got is name from the mispronounciation of the 'Three Docs' to the
+                                        'Three Ducks'</li>
+                                </ol>
+                                <br> <!--actually adding a break line, not for "can be margin" spacing-->
+                                <h3>- Restaurants -</h3>
+                                <ol>
+                                    <li><a href="https://www.restaurantallegro.com/" target="_blank">Restaurant
+                                            Allegro</a></li>
+                                    <li><a href="http://cafecheznous.com/" target="_blank">Cafe Chez-Nous</a></li>
+                                    <li><a href="https://restaulorchidee.com/" target="_blank">Restaurant L'Orchidee</a>
+                                    </li>
+                                </ol>
+                            </div>
+                    <hr class="half_hr" style="margin-left: 50px; margin-right: auto;">
+                            <div class="col-12 half-height" id="recommendations">
+                                <h2 class="centered">- Recommendation-</h2>
+                                <p>
+                                    As somebody who thoroughly loves Quebec, I highly recommend this destination. The
+                                    locals speak native French, though English is still understood. The views are
+                                    excellent, the drive to Quebec City is only an hour, and an hour in the opposite
+                                    direction is the fjord of Saguenay. Overall, service was great, food was excellent,
+                                    and the experience was highly enjoyable. I would definitely go here again.
+                                </p>
+                            </div>
                         </div>
                         <div class="col-12 col-lg-4">
-                            <div class="row">
+                            <!--img col-->
+                            <div class="row img-col">
                                 <div class="col-4 col-lg-12">
                                     <img src="imgs/Séjour-Fairmonnt-Manoir-Richelieu-Été.png">
                                 </div>
@@ -140,25 +176,27 @@
                                     <img src="imgs/interio2.jpg">
                                 </div>
                                 <div class="col-4 col-lg-12">
-                                    <img src="imgs/interior.jpg">
+                                    <img src="imgs/auberge.jpg">
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <hr class="half_hr">
+                    <hr class="half_hr" style="width: 80%; margin-right: auto; margin-left: auto;">
+                    <!--footer-->
                     <section class="filler">
-                        <div class="footer_container">
-                            <div class="pre-footer"></div>
-                            <footer>
-                                <!-- place footer here -->
-                            </footer>
-                        </div>
                     </section>
                 </div>
             </div>
             <!--main content end-->
             <aside class="col-1 sides"></aside>
         </div>
+    </div>
+
+    <div class="footer_container" id="whole_footer">
+        <div class="pre-footer"></div>
+        <footer class="text-center">
+            <a href="https://www.tripadvisor.com/Attractions-g499346-Activities-La_Malbaie_Charlevoix_Quebec.html" target="_blank">Malbaie Tripadvisor</a>
+        </footer>
     </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -168,7 +206,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <!--my js-->
     <script src="script.js"></script>
+
 </body>
 
 </html>
+
+<!---->
